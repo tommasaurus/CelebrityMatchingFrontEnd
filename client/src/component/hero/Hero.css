@@ -403,6 +403,14 @@ body {
   text-align: center;
 }
 
+.top-matches h2 {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2rem; /* Adjust as necessary */
+  padding-bottom: 20px; /* Adds space below the heading */
+  margin-top: 1rem;
+}
+
 .matches-container {
   display: flex;
   flex-wrap: wrap;
@@ -577,6 +585,7 @@ body {
 }
 
 .beta-info-highlight {
+  text-align: center;
   font-size: 1.1rem;
   font-weight: 600;
   color: #ff4d4d;
