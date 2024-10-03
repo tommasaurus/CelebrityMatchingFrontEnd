@@ -145,7 +145,6 @@ const Hero = ({ navigateTo }) => {
           },
         }
       );
-      console.log(response.data);
       setMatches(response.data.matches);
       setShowViewMatchesButton(true);
       setMatchesLoaded(true);
