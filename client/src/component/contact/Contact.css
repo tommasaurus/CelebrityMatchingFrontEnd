@@ -88,6 +88,8 @@ textarea.form-input {
   align-items: center;
   justify-content: center;
   width: 100%;
+  max-width: 200px; /* Limit the button width */
+  margin: 0 auto; /* Center the button */
   font-family: inherit;
 }
 
@@ -135,20 +137,7 @@ textarea.form-input {
 .error-message {
   background-color: rgba(255, 0, 0, 0.9);
 }
-@media (max-width: 600px) {
-  .contact-content {
-    padding: 2rem;
-  }
 
-  .form-input {
-    font-size: 0.9rem;
-  }
-
-  .submit-button {
-    padding: 0.6rem;
-  }
-}
-/* Add this to ensure the background color extends to the bottom of the page */
 body {
   background-color: #fff4ea;
   margin: 0;
@@ -192,4 +181,35 @@ body {
   background-color: rgba(255, 242, 242, 0.7);
   box-shadow: 0 10px 2.5px rgba(0, 0, 0, 0.05);
   margin-top: -0.8rem;
+}
+
+@media (max-width: 600px) {
+  .contact-content {
+    padding: 2rem;
+  }
+
+  .form-input {
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    padding: 0.6rem;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .input-wrapper input,
+  .input-wrapper textarea {
+    width: 90%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .submit-button,
+  .success-button {
+    max-width: 70%; /* Make the button slightly wider on very small screens */
+  }
 }

@@ -224,7 +224,7 @@ const Hero = ({ navigateTo }) => {
       <div className='hero-container'>
         <img src={"/OFlogo.png"} alt='Logo' className='hero-logo' />
         <p className='hero-subtitle'>
-          Find your OnlyFans Model doppelgänger by uploading your portrait.
+          Find out if your girlfriend is on OnlyFans...
         </p>
         {!filePreview ? (
           <div className='hero-content'>
@@ -345,7 +345,7 @@ const Hero = ({ navigateTo }) => {
           </div>
           <div className='feature'>
             <Lock size={20} />
-            <span>Private and Secure</span>
+            <span>Private & Secure</span>
           </div>
         </div>
         {matches.length > 0 && (
@@ -397,7 +397,9 @@ const Hero = ({ navigateTo }) => {
                 {conversionCount.toLocaleString()}
               </span>{" "}
               files with a total size of{" "}
-              <span className='animated-number'>{fileSize.toLocaleString()}</span>{" "}
+              <span className='animated-number'>
+                {fileSize.toLocaleString()}
+              </span>{" "}
               GB.
             </p>
           </div>
@@ -432,7 +434,7 @@ const Hero = ({ navigateTo }) => {
                 icon: <CheckCircle size={32} />,
                 title: "Enjoy the result!",
                 description:
-                  "Our Neural Network compares your face with celebrities and suggests the most similar ones.",
+                  "Our Neural Network compares your face with OnlyFans models and suggests the most similar ones.",
               },
             ].map((instruction, index) => (
               <div key={index} className='instruction-block'>

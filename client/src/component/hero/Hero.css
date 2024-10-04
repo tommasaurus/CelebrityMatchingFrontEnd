@@ -30,7 +30,7 @@ body {
 .hero-subtitle {
   color: #666;
   margin-bottom: 2rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 
@@ -299,10 +299,10 @@ body {
 
 @keyframes gradientMove {
   0% {
-    background-position: 0% 50%;
+    background-position: 200% 50%;
   }
   100% {
-    background-position: 200% 50%;
+    background-position: 0% 50%;
   }
 }
 
@@ -328,10 +328,10 @@ body {
 
 @keyframes gradientMoveGreen {
   0% {
-    background-position: 0% 50%;
+    background-position: 200% 50%;
   }
   100% {
-    background-position: 200% 50%;
+    background-position: 0% 50%;
   }
 }
 
@@ -394,6 +394,7 @@ body {
   align-items: center;
   font-size: 1rem;
   color: #666;
+  font-weight: bold;
 }
 
 .feature svg {
@@ -497,7 +498,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;  
+  text-align: center;
 }
 
 .conversion-stats {
@@ -511,7 +512,7 @@ body {
   text-align: center;
   font-size: 1rem;
   color: #666;
-  margin-top: -0.4rem;  
+  margin-top: -0.4rem;
 }
 
 .animated-number {
@@ -606,18 +607,14 @@ body {
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
-  .hero-container {
-    padding: 1rem;
-    padding-top: 60px;
-  }
-
+@media (max-width: 1000px) {
   .hero-logo {
-    width: 200px;
+    width: 85%;
   }
 
   .hero-subtitle {
-    font-size: 0.9rem;
+    font-size: 1.15rem;
+    margin-bottom: 2.5rem;
   }
 
   .hero-content {
@@ -625,14 +622,15 @@ body {
     align-items: center;
   }
 
-  .upload-section,
-  .carousel-section {
-    max-width: 250px;
+  .upload-section {
+    width: 45%;
+    height: auto;
   }
 
   .or-divider {
     flex-direction: row;
-    margin: 1rem 0;
+    margin-top: -1rem;
+    margin-bottom: 0rem;
   }
 
   .or-line {
@@ -644,117 +642,16 @@ body {
     margin: 0 0.5rem;
   }
 
-  .features {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .feature {
-    margin-bottom: 1rem;
-  }
-
-  .instruction-blocks {
-    flex-direction: column;
-  }
-
-  .instruction-block {
-    margin-bottom: 2rem;
-  }
-
-  .match {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .uploaded-image-container {
-    max-width: 100%;
-  }
-
-  .uploaded-image {
-    max-height: 250px;
-  }
-
-  .file-name-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .file-name {
-    margin-right: 0;
-    margin-bottom: 0.5rem;
-  }
-
-  .delete-file {
-    transform: none;
-  }
-
-  .action-buttons {
-    width: 100%;
-  }
-
-  .upload-button,
-  .gallery-button {
-    width: 100%;
-    max-width: 250px;
-  }
-
-  .gallery-stats {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .gallery-button {    
-    margin-top: 0.5rem;
-  }
-
-  .beta-info-section {
-    padding: 0 1rem;
-  }
-
-  .beta-info-title {
-    font-size: 1.4rem;
-  }
-
-  .beta-info-text {
-    font-size: 0.9rem;
-  }
-
-  .beta-info-highlight {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 1000px) {
-  .hero-logo {
-    width: 40%;
-  }
-
-  .hero-subtitle {
-    font-size: 0.8rem;
-  }
-
-  .upload-section {    
-    width: 45%;
-    height: auto;     
-  }
-  
-  .carousel-section {    
+  .carousel-section {
     width: 48%;
-    height: auto;     
-  }
-
-  .or-divider {
-    display: flex;    
-    align-items: center;
-    margin-bottom: -0.4rem;
-    margin-top: -2rem;
+    height: auto;
   }
 
   .carousel-image {
     width: 100%;
-    height: auto; 
+    height: auto;
     object-fit: cover;
-  } 
+  }
 
   .upload-text {
     font-size: 1.1rem;
@@ -773,14 +670,24 @@ body {
     height: 20px;
   }
 
-   .features {
-    flex-direction: row; 
+  .features {
+    flex-direction: row;
     justify-content: center;
     gap: 1rem;
+    margin-top: 1rem;
   }
 
   .feature {
-    flex: 1; 
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+
+  .feature svg {
+    margin-right: 0.3rem;
+    width: 25px;
+    height: 35px;
   }
 
   .instruction-block-title {
@@ -801,21 +708,20 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;  
+    text-align: center;
   }
 
-  
   .conversion-stats {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 2.3rem;
+    margin-bottom: 0.4rem;
     font-size: 1rem;
     color: #666;
     max-width: 80%;
   }
-  
+
   .conversion-stats p {
-    text-align: center; /* Ensures paragraph content is centered */
-    margin: 0; /* Removes default margins */
+    text-align: center;
+    margin: 0;
   }
 
   .gallery-stats {
@@ -823,7 +729,10 @@ body {
     font-size: 1rem;
     color: #666;
     margin-top: -0.4rem;
-    max-width: 70%
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .animated-number {
@@ -831,55 +740,133 @@ body {
   }
 
   .instruction-section {
-    margin-top: 3rem;
+    margin-top: 2rem;
     width: 100%;
     max-width: 800px;
   }
-  
+
   .instruction-title {
     font-size: 1.8rem;
     color: #333;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     text-align: center;
   }
-  
+
   .instruction-blocks {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem; /* Decrease this value to reduce the vertical gap */
+    gap: 0.5rem;
   }
-  
+
   .instruction-block {
     width: 100%;
-    max-width: 300px; /* Ensure consistent width for each block */
+    max-width: 300px;
     text-align: center;
-    margin-bottom: -0.3rem; 
+    margin-bottom: 0.3rem;
   }
-  
+
   .instruction-icon {
     background-color: #fff4ea;
     color: #2f59ffcc;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 0.5rem auto; /* Center the icon */
+    margin-bottom: -0.5rem;
   }
-  
+
   .instruction-block-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #333;
     margin-bottom: 0.5rem;
   }
-  
+
   .instruction-block-description {
     color: #666;
     font-size: 0.9rem;
-    line-height: 1.5;
-    text-align: center; /* Center-align the description text */
-    margin: 0.5rem 0; /* Reduce margin to decrease vertical gap */
+    line-height: 1.4;
+    text-align: center;
+    margin: 0.3rem 0;
+  }
+
+  .hero-container {
+    padding: 1rem;
+    padding-top: 60px;
+  }
+
+  .match {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .uploaded-image-container {
+    max-width: 100%;
+  }
+
+  .uploaded-image {
+    max-height: 250px;
+  }
+
+  .file-name-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .file-name {
+    margin-right: 0.5rem;
+    margin-bottom: 0;
+    max-width: calc(100% - 2.5rem); /* Adjust based on the delete button size */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .delete-file {
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+  }
+
+  .action-buttons {
+    width: 100%;
+  }
+
+  .upload-button {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 1rem;
+  }
+
+  .gallery-button {
+    width: auto;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .beta-info-section {
+    margin-top: 3rem;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    margin-bottom: 6rem;
+  }
+
+  .beta-info-title {
+    font-size: 1.4rem;
+  }
+
+  .beta-info-text {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .beta-info-highlight {
+    font-size: 1rem;
   }
 }
