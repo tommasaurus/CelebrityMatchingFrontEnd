@@ -202,4 +202,9 @@
     width: 3vh;
     height: 3vh;
   }    
+
+  .match-popup-close svg {
+    width: 3em; /* Adjust size for mobile */
+    height: 3em; /* Adjust size for mobile */
+  }
 }
