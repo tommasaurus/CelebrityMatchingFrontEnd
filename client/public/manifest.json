@@ -28,6 +28,6 @@
     "background_color": "#ffffff",
     "theme_color": "#e73939",
     "description": "Find your celebrity doppelgänger using CelebrityMatching.",
-    "orientation": "portrait"
+    "orientation": "portrait" 
   }
   
