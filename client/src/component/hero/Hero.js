@@ -137,7 +137,7 @@ const Hero = ({ navigateTo }) => {
       setUploading(true);
       setShowViewMatchesButton(false);
       const response = await axios.post(
-        `http://${process.env.REACT_APP_BACKEND_IP}:80/upload-image/`,
+        `https://${process.env.REACT_APP_BACKEND_IP}/upload-image/`,
         formData,
         {
           headers: {
@@ -389,26 +389,29 @@ const Hero = ({ navigateTo }) => {
             )}
           </div>
         )}
-        <div className='conversion-stats'>
-          <p>
-            We've already converted{" "}
-            <span className='animated-number'>
-              {conversionCount.toLocaleString()}
-            </span>{" "}
-            files with a total size of{" "}
-            <span className='animated-number'>{fileSize.toLocaleString()}</span>{" "}
-            TB.
-          </p>
+        <div className='stats-container'>
+          <div className='conversion-stats'>
+            <p>
+              We've already converted{" "}
+              <span className='animated-number'>
+                {conversionCount.toLocaleString()}
+              </span>{" "}
+              files with a total size of{" "}
+              <span className='animated-number'>{fileSize.toLocaleString()}</span>{" "}
+              GB.
+            </p>
+          </div>
+          <div className='gallery-stats'>
+            <p>
+              View our gallery with{" "}
+              <span className='animated-number'>15,000+</span> images{" "}
+              <button className='gallery-button' onClick={handleGalleryClick}>
+                Gallery
+              </button>
+            </p>
+          </div>
         </div>
-        <div className='gallery-stats'>
-          <p>
-            View our gallery with{" "}
-            <span className='animated-number'>15,000+</span> images{" "}
-            <button className='gallery-button' onClick={handleGalleryClick}>
-              Gallery
-            </button>
-          </p>
-        </div>
+
         <div className='instruction-section'>
           <h2 className='instruction-title'>How It Works</h2>
           <div className='instruction-blocks'>

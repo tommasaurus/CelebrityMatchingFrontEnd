@@ -32,7 +32,7 @@ const InfiniteScrollImages = ({ navigateTo }) => {
     setLoading(true);
     try {
       const response = await fetch(
-        `http://${process.env.REACT_APP_BACKEND_IP}:80/random-images?count=5&page=${page}`
+        `https://${process.env.REACT_APP_BACKEND_IP}/random-images?count=5&page=${page}`
       );
       const data = await response.json();
       if (response.ok) {
@@ -53,7 +53,7 @@ const InfiniteScrollImages = ({ navigateTo }) => {
     setLoading(true);
     try {
       const response = await fetch(
-        `http://${process.env.REACT_APP_BACKEND_IP}:80/random-images?count=5&page=${page}`
+        `https://${process.env.REACT_APP_BACKEND_IP}/random-images?count=5&page=${page}`
       );
       const data = await response.json();
       if (response.ok) {

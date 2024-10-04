@@ -28,7 +28,7 @@ const ModelPopup = ({ model, onClose }) => {
       setIsLoading(true);
       try {
         const response = await fetch(
-          `http://${process.env.REACT_APP_BACKEND_IP}:80/get-social-links-by-name/${encodeURIComponent(
+          `https://${process.env.REACT_APP_BACKEND_IP}/get-social-links-by-name/${encodeURIComponent(
             model.name
           )}`
         );

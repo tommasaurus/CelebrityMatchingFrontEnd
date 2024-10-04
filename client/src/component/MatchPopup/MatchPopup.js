@@ -28,7 +28,7 @@ const MatchPopup = ({ match, onClose }) => {
     const fetchSocialLinks = async () => {
       try {
         const response = await fetch(
-          `http://${process.env.REACT_APP_BACKEND_IP}:80/get-social-links/${match.model_id}`
+          `https://${process.env.REACT_APP_BACKEND_IP}/get-social-links/${match.model_id}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch social links");
