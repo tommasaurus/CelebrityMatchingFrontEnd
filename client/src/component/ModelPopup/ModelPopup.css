@@ -107,6 +107,7 @@
 }
 
 .model-popup-info h2 {
+  text-align: center;
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 1rem;
@@ -120,6 +121,7 @@
 
 /* Social Links */
 .model-popup-social-links {
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -161,7 +163,13 @@
   }
 
   .model-popup-info {
-    padding: 1.5rem;
+    padding:3rem;    
+  }
+
+  .model-popup-info h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
   }
 
   .model-popup-close {
