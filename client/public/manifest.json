@@ -3,6 +3,11 @@
     "name": "CelebrityMatching",
     "icons": [
       {
+        "src": "favicon.webp",
+        "sizes": "64x64 32x32 24x24 16x16",
+        "type": "image/webp"
+      },
+      {
         "src": "OFlogo.png",
         "sizes": "64x64 32x32 24x24 16x16",
         "type": "image/png"
