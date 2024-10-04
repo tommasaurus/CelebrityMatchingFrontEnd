@@ -79,7 +79,7 @@ const MatchPopup = ({ match, onClose }) => {
     <div className={`match-popup-overlay ${isVisible ? "visible" : ""}`}>
       <div className={`match-popup-content ${isVisible ? "visible" : ""}`}>
         <button className='match-popup-close' onClick={handleClose}>
-          <X size={"10vh"} color='red' />
+          <X size={16} color='red' />
         </button>
         <div className='match-popup-image'>
           {match.image_url ? (

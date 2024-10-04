@@ -94,7 +94,7 @@ const ModelPopup = ({ model, onClose }) => {
     >
       <div className={`model-popup-content ${isVisible ? "visible" : ""}`}>
         <button className="model-popup-close" onClick={handleClose}>
-          <X size={"10vh"} />
+          <X size={16} />
         </button>
         <div className="model-popup-image">
           {model.image_url ? (
