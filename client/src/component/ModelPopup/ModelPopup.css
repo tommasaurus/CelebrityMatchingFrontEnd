@@ -155,7 +155,7 @@
 @media (max-width: 768px) {
   .model-popup-content {
     flex-direction: column;
-    width: 95%;
+    width: 70%;
   }
 
   .model-popup-image {
@@ -163,19 +163,20 @@
   }
 
   .model-popup-info {
-    padding:3rem;    
+    padding:4vh;    
   }
 
   .model-popup-info h2 {
-    font-size: 2rem;
+    font-size: 3vh;
     font-weight: 500;
-    margin-bottom: 1rem;
+    margin-bottom: 2vh;
+    margin-top: -2vh;
   }
 
   .model-popup-close {
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
+    top: 1vh;
+    right: 1vh;
+    width: 3vh;
+    height: 3vh;
   }
 }
