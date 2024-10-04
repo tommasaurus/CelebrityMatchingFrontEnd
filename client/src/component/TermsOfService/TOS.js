@@ -181,7 +181,7 @@ const TOS = () => {
       <h2>13. Contact Us</h2>
       <p>
         If you have any questions or concerns about these Terms, please contact
-        us at [contact email].
+        us at QuRonVentures@gmail.com.
       </p>
     </div>
   );

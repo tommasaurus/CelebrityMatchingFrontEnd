@@ -94,7 +94,7 @@ const PrivacyPolicy = () => {
       </p>
       <p>
         If you wish to exercise any of these rights, please contact us at
-        [contact email].
+        QuRonVentures@gmail.com.
       </p>
 
       <h2>7. Changes to This Privacy Policy</h2>
@@ -107,7 +107,7 @@ const PrivacyPolicy = () => {
       <h2>8. Contact Us</h2>
       <p>
         If you have any questions or concerns about this Privacy Policy or our
-        data practices, please contact us at [contact email].
+        data practices, please contact us at QuRonVentures@gmail.com.
       </p>
     </div>
   );
