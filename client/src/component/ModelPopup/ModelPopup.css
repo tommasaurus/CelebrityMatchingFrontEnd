@@ -172,11 +172,4 @@
     margin-bottom: 2vh;
     margin-top: -2vh;
   }
-
-  .model-popup-close {
-    top: 1vh;
-    right: 1vh;
-    width: 3vh;
-    height: 3vh;
-  }
 }

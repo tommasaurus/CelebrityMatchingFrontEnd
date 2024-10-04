@@ -202,10 +202,5 @@
     width: 100%;
     height: 100%;
     display: block; /* Prevents extra space around the SVG */
-  }
-  
-  /* .match-popup-close {    
-    width: 3vh;
-    height: 3vh;
-  }     */
+  }  
 }
