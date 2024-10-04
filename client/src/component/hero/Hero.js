@@ -224,7 +224,7 @@ const Hero = ({ navigateTo }) => {
       <div className='hero-container'>
         <img src={"/OFlogo.png"} alt='Logo' className='hero-logo' />
         <p className='hero-subtitle'>
-          Find out if your girlfriend is on OnlyFans...
+          Find out if your girlfriend is on OnlyFans
         </p>
         {!filePreview ? (
           <div className='hero-content'>
