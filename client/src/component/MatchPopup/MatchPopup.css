@@ -177,7 +177,8 @@
   }  
 
   .match-popup-info {
-    padding: 1vh;     
+    padding: 1vh;  
+    margin-top: -2vh;   
   }
 
   .match-popup-info h2 {
@@ -200,5 +201,5 @@
   .match-popup-close {    
     width: 3vh;
     height: 3vh;
-  }  
+  }    
 }
