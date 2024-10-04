@@ -455,11 +455,13 @@ body {
 
 .match p {
   margin: 5px 0;
+  text-align: center;
 }
 
 .match p:first-child {
   font-weight: bold;
   color: #00b0f1;
+  font-size: 1.5rem;
 }
 
 .view-more-button {
@@ -810,6 +812,39 @@ body {
   .match {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+  
+  .matches-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    gap: 20px; /* Space between match items */
+    width: 70%;    
+    margin: 0 auto; /* Centers the container itself */
+    margin-top: 1rem;
+    text-align: center; /* Ensures text alignment is centered */
+    
+  }
+  
+  .match {
+    box-shadow: 0rem 0.5rem 2rem rgba(0, 149, 255, 0.488);
+  }
+
+  /* Match Image */
+  .match img {
+    justify-content: center;
+    width: 100%;
+    height: auto; /* Allows the height to adjust proportionally */
+    object-fit: cover;
+    object-position: center;    
+  }
+
+  /* Match Content */
+  .match-content {
+    padding: 15px;
+    background-color: #faf8f6;
+    text-align: center;
   }
 
   .uploaded-image-container {
