@@ -6,6 +6,7 @@ import InfiniteScrollImages from "./component/scroll/Scroll";
 import { Navbar, Footer } from "./component/navbar/NavbarFooter";
 import TOS from "./component/TermsOfService/TOS";
 import PP from "./component/PrivacyPolicy/PP";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
@@ -39,6 +40,7 @@ function App() {
       <Navbar navigateTo={navigateTo} />
       <main>{renderCurrentPage()}</main>
       <Footer navigateTo={navigateTo} />
+      <Analytics />
     </div>
   );
 }

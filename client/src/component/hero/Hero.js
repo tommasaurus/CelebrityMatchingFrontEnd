@@ -26,7 +26,7 @@ const Hero = ({ navigateTo }) => {
   const [matches, setMatches] = useState([]);
   const [uploading, setUploading] = useState(false);
   const [showAllMatches, setShowAllMatches] = useState(false);
-  const [conversionCount, setConversionCount] = useState(12465);
+  const [conversionCount, setConversionCount] = useState(0);
   const [fileSize, setFileSize] = useState(64);
   const [showViewMatchesButton, setShowViewMatchesButton] = useState(false);
   const [matchesLoaded, setMatchesLoaded] = useState(false);
@@ -45,10 +45,23 @@ const Hero = ({ navigateTo }) => {
   const [uploadingText, setUploadingText] = useState("Uploading");
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setConversionCount((prevCount) => prevCount + 1);
-    }, 5000);
-    return () => clearInterval(timer);
+    const fetchConversionCount = async () => {
+      try {
+        const response = await axios.get(`https://${process.env.REACT_APP_BACKEND_IP}/get-conversion-count`);
+        setConversionCount(response.data.conversion_count);
+      } catch (error) {
+        console.error("Error fetching conversion count:", error);
+      }
+    };
+  
+    fetchConversionCount();
+  
+    // Set interval to fetch updated conversion count from backend every 10 seconds
+    const interval = setInterval(() => {
+      fetchConversionCount();
+    }, 10000); // every 10 seconds
+  
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
@@ -213,7 +226,7 @@ const Hero = ({ navigateTo }) => {
 
   const adjustSimilarity = (similarity) => {
     // Add 50 to the similarity score
-    const inflatedSimilarity = similarity * 100 + 50;
+    const inflatedSimilarity = similarity * 100 * 2;
 
     // If the inflated similarity exceeds 100, set it to 100
     return inflatedSimilarity > 100 ? 100 : inflatedSimilarity.toFixed(2);
