@@ -616,6 +616,16 @@ body {
   background-color: #fff4ea;
 }
 
+.error-message {
+  color: red;
+  background-color: #ffe6e6;
+  border: 1px solid red;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
 /* Media Queries */
 @media (max-width: 1000px) {
   .hero-logo {

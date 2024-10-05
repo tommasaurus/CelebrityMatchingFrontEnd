@@ -32,6 +32,7 @@ const Hero = ({ navigateTo }) => {
   const [fileSize, setFileSize] = useState(579);
   const [showViewMatchesButton, setShowViewMatchesButton] = useState(false);
   const [matchesLoaded, setMatchesLoaded] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const fileInputRef = useRef(null);
   const matchesRef = useRef(null);
   const galleryRef = useRef(null);
@@ -202,13 +203,15 @@ const Hero = ({ navigateTo }) => {
 
   const handleUploadFile = async () => {
     if (!file) return;
-
+  
     const formData = new FormData();
     formData.append("file", file);
-
+  
     try {
       setUploading(true);
       setShowViewMatchesButton(false);
+      setErrorMessage(""); // Clear any previous error messages
+  
       const response = await axios.post(
         `https://${process.env.REACT_APP_BACKEND_IP}/upload-image/`,
         formData,
@@ -223,13 +226,16 @@ const Hero = ({ navigateTo }) => {
       setMatchesLoaded(true);
     } catch (error) {
       console.error("Error uploading image:", error);
-      if (error.response && error.response.status === 500) {
-        alert("Error: Please make sure to upload an image with a face clearly visible.");
+      if (error.response && error.response.status === 400) {
+        setErrorMessage("Error: Please make sure to upload an image with a face clearly visible.");
+      } else {
+        setErrorMessage("Error: Please make sure to upload an image with a face clearly visible.");
       }
     } finally {
       setUploading(false);
     }
   };
+  
 
   const toggleShowAllMatches = () => {
     setShowAllMatches(!showAllMatches);
@@ -301,6 +307,13 @@ const Hero = ({ navigateTo }) => {
         <p className='hero-subtitle'>
           Find out if your girlfriend is on OnlyFans
         </p>
+
+        {errorMessage && (
+        <div className="error-message">
+          <p>{errorMessage}</p>
+        </div>
+        )}
+
         {!filePreview ? (
           <div className='hero-content'>
             <div className='upload-section'>
