@@ -322,7 +322,6 @@ const Hero = ({ navigateTo }) => {
                   onChange={handleFileChange}
                   ref={fileInputRef}
                   accept="image/jpeg,image/png,image/heic,image/heif"
-                  capture=""
                   style={{ display: "none" }}
                 />
               </div>
