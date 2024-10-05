@@ -56,7 +56,7 @@ const Hero = ({ navigateTo }) => {
   
     fetchConversionCount();
   
-    // Set interval to fetch updated conversion count from backend every 10 seconds
+    // Set interval to fetch updated conversion count from backend every hour
     const interval = setInterval(() => {
       fetchConversionCount();
     }, 3600000); // every hour
