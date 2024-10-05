@@ -223,6 +223,9 @@ const Hero = ({ navigateTo }) => {
       setMatchesLoaded(true);
     } catch (error) {
       console.error("Error uploading image:", error);
+      if (error.response && error.response.status === 500) {
+        alert("Error: Please make sure to upload an image with a face clearly visible.");
+      }
     } finally {
       setUploading(false);
     }
