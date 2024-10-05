@@ -616,14 +616,18 @@ body {
   background-color: #fff4ea;
 }
 
-.error-message {
+.error-message {    
+  background-color: transparent;     
+  max-width: 80%; 
+}
+
+.error-message-no-picture p {    
+  font-size: 3vh; /* Reduced font size */
+  font-weight: bolder;
+  text-align: center;        
+  margin-bottom: 3vh; 
+  margin-top: -2vh;
   color: red;
-  background-color: #ffe6e6;
-  border: 1px solid red;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  text-align: center;
 }
 
 /* Media Queries */
@@ -923,5 +927,11 @@ body {
 
   .beta-info-highlight {
     font-size: 1rem;
-  } 
+  }   
+
+  .error-message-no-picture p {    
+      font-size: 2vh; /* Reduced font size */      
+      margin-bottom: 3vh; 
+      margin-top: -3.3vh;      
+  }
 }

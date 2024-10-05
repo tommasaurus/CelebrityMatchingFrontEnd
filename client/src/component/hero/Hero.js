@@ -227,9 +227,9 @@ const Hero = ({ navigateTo }) => {
     } catch (error) {
       console.error("Error uploading image:", error);
       if (error.response && error.response.status === 400) {
-        setErrorMessage("Error: Please make sure to upload an image with a face clearly visible.");
+        setErrorMessage("Upload an image with a face clearly visible");
       } else {
-        setErrorMessage("Error: Please make sure to upload an image with a face clearly visible.");
+        setErrorMessage("Upload an image with a face clearly visible");
       }
     } finally {
       setUploading(false);
@@ -309,7 +309,7 @@ const Hero = ({ navigateTo }) => {
         </p>
 
         {errorMessage && (
-        <div className="error-message">
+        <div className="error-message-no-picture">
           <p>{errorMessage}</p>
         </div>
         )}
