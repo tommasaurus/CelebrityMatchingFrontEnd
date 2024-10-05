@@ -202,13 +202,15 @@ const Hero = ({ navigateTo }) => {
 
   const handleUploadFile = async () => {
     if (!file) return;
-
+  
     const formData = new FormData();
     formData.append("file", file);
-
+  
     try {
       setUploading(true);
       setShowViewMatchesButton(false);
+      setErrorMessage(""); // Clear previous error message
+  
       const response = await axios.post(
         `https://${process.env.REACT_APP_BACKEND_IP}/upload-image/`,
         formData,
@@ -218,18 +220,21 @@ const Hero = ({ navigateTo }) => {
           },
         }
       );
+  
       setMatches(response.data.matches);
       setShowViewMatchesButton(true);
       setMatchesLoaded(true);
     } catch (error) {
       console.error("Error uploading image:", error);
-      if (error.response && error.response.status === 500) {
-        alert("Error: Please make sure to upload an image with a face clearly visible.");
+      if (error.response && error.response.status === 400) {
+        setErrorMessage("Please make sure to upload an image with a face clearly visible.");
+      } else {
+        setErrorMessage("An unexpected error occurred. Please try again.");
       }
     } finally {
       setUploading(false);
     }
-  };
+  };  
 
   const toggleShowAllMatches = () => {
     setShowAllMatches(!showAllMatches);
