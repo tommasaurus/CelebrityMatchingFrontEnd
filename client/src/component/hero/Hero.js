@@ -317,11 +317,12 @@ const Hero = ({ navigateTo }) => {
                   Click to browse or drag and drop
                 </p>
                 <input
-                  type='file'
-                  className='file-input'
+                  type="file"
+                  className="file-input"
                   onChange={handleFileChange}
                   ref={fileInputRef}
-                  accept='image/*,image/heic,image/heif'
+                  accept="image/jpeg,image/png,image/heic,image/heif"
+                  capture=""
                   style={{ display: "none" }}
                 />
               </div>
