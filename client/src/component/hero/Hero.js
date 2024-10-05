@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import heic2any from 'heic2any';
+import imageCompression from 'browser-image-compression';
 import axios from "axios";
 import {
   Upload,
@@ -89,11 +91,69 @@ const Hero = ({ navigateTo }) => {
     return () => clearInterval(interval);
   }, [uploading]);
 
-  const handleFileChange = (event) => {
+  const compressAndSetFile = async (fileToCompress) => {
+    // console.log("Compressing File Type:", fileToCompress.type);
+    // console.log("Compressing File Size:", fileToCompress.size / 1024 / 1024, "MB");
+  
+    const options = {
+      maxSizeMB: 1, // Target size in MB
+      maxWidthOrHeight: 1024, // Max width or height in pixels
+      useWebWorker: true,
+    };
+  
+    try {
+      const compressedFile = await imageCompression(fileToCompress, options);
+      // console.log("Compressed File Size:", compressedFile.size / 1024 / 1024, "MB");
+  
+      setFile(compressedFile);
+      setFilePreview(URL.createObjectURL(compressedFile));
+    } catch (error) {
+      console.error("Error compressing image:", error);
+      alert("Failed to compress image. Please try a different image.");
+    }
+  };
+
+  const handleFileChange = async (event) => {
     if (event.target.files && event.target.files[0]) {
-      const uploadedFile = event.target.files[0];
-      setFile(uploadedFile);
-      setFilePreview(URL.createObjectURL(uploadedFile));
+      let uploadedFile = event.target.files[0];
+      // console.log("Original File Type:", uploadedFile.type);
+      // console.log("Original File Size:", uploadedFile.size / 1024 / 1024, "MB");
+  
+      // Check if the file is HEIC or HEIF
+      if (
+        uploadedFile.type === 'image/heic' ||
+        uploadedFile.type === 'image/heif' ||
+        uploadedFile.name.toLowerCase().endsWith('.heic') ||
+        uploadedFile.name.toLowerCase().endsWith('.heif')
+      ) {
+        try {
+          // Convert HEIC to JPEG
+          const conversionResult = await heic2any({ blob: uploadedFile, toType: 'image/jpeg' });
+  
+          // heic2any may return a Blob or an array of Blobs
+          let convertedBlob;
+          if (Array.isArray(conversionResult)) {
+            convertedBlob = conversionResult[0];
+          } else {
+            convertedBlob = conversionResult;
+          }
+  
+          uploadedFile = new File(
+            [convertedBlob],
+            uploadedFile.name.replace(/\.[^/.]+$/, ".jpg"),
+            { type: 'image/jpeg' }
+          );
+          // console.log("Converted File Type:", uploadedFile.type);
+          // console.log("Converted File Size:", uploadedFile.size / 1024 / 1024, "MB");
+        } catch (error) {
+          console.error("Error converting HEIC image:", error);
+          alert("Failed to process HEIC image. Please try a different image.");
+          return;
+        }
+      }
+  
+      // Proceed to compress the image
+      await compressAndSetFile(uploadedFile);
     }
   };
 
@@ -261,7 +321,7 @@ const Hero = ({ navigateTo }) => {
                   className='file-input'
                   onChange={handleFileChange}
                   ref={fileInputRef}
-                  accept='image/*'
+                  accept='image/*,image/heic,image/heif'
                   style={{ display: "none" }}
                 />
               </div>
