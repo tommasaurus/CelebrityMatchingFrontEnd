@@ -59,7 +59,7 @@ const Hero = ({ navigateTo }) => {
     // Set interval to fetch updated conversion count from backend every 10 seconds
     const interval = setInterval(() => {
       fetchConversionCount();
-    }, 10000); // every 10 seconds
+    }, 3600000); // every hour
   
     return () => clearInterval(interval);
   }, []);
@@ -224,8 +224,7 @@ const Hero = ({ navigateTo }) => {
     }
   };
 
-  const adjustSimilarity = (similarity) => {
-    // Add 50 to the similarity score
+  const adjustSimilarity = (similarity) => {    
     const inflatedSimilarity = similarity * 100 * 2;
 
     // If the inflated similarity exceeds 100, set it to 100

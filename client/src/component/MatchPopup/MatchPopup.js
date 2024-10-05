@@ -45,9 +45,8 @@ const MatchPopup = ({ match, onClose }) => {
     }
   }, [match.model_id]);
 
-  const adjustSimilarity = (similarity) => {
-    // Add 50 to the similarity score
-    const inflatedSimilarity = similarity * 100 + 50;
+  const adjustSimilarity = (similarity) => {    
+    const inflatedSimilarity = similarity * 100 * 2;
 
     // If the inflated similarity exceeds 100, set it to 100
     return inflatedSimilarity > 100 ? 100 : inflatedSimilarity.toFixed(2);
