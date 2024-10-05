@@ -27,7 +27,7 @@ const Hero = ({ navigateTo }) => {
   const [uploading, setUploading] = useState(false);
   const [showAllMatches, setShowAllMatches] = useState(false);
   const [conversionCount, setConversionCount] = useState(0);
-  const [fileSize, setFileSize] = useState(64);
+  const [fileSize, setFileSize] = useState(579);
   const [showViewMatchesButton, setShowViewMatchesButton] = useState(false);
   const [matchesLoaded, setMatchesLoaded] = useState(false);
   const fileInputRef = useRef(null);
@@ -419,7 +419,7 @@ const Hero = ({ navigateTo }) => {
           <div className='gallery-stats'>
             <p>
               View our gallery with{" "}
-              <span className='animated-number'>15,000+</span> images{" "}
+              <span className='animated-number'>100,000+</span> images{" "}
               <button className='gallery-button' onClick={handleGalleryClick}>
                 Gallery
               </button>
