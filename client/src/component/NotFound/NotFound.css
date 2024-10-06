@@ -1,0 +1,20 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* Centers items horizontally */
+  justify-content: center;  /* Centers items vertically */
+  height: 60vh;  /* Full viewport height to ensure the content is centered */
+  width: 100vw;  /* Full viewport width */
+  text-align: center;
+  margin: 0;  /* Remove default margin */
+}
+
+.back-home {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-home:hover {
+  text-decoration: underline;
+}

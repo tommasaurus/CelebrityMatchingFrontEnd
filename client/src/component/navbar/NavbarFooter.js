@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./NavbarFooter.css";
 
-export const Navbar = ({ navigateTo }) => {
+export const Navbar = () => {
   const handleHowItWorksClick = () => {
     const scrollPosition = window.innerHeight * 0.7;
     window.scrollTo({
@@ -11,103 +12,85 @@ export const Navbar = ({ navigateTo }) => {
   };
 
   return (
-    <nav className='navbar'>
-      <div className='logo'>
-        <button onClick={() => navigateTo("home")} className='logo-button'>
+    <nav className="navbar">
+      <div className="logo">
+        <Link to="/" className="logo-button">
           <img
             src={"/OFlogo.png"}
-            alt='OnlyFans Finder Logo'
-            className='logo-image'
+            alt="OnlyFans Finder Logo"
+            className="logo-image"
           />
-        </button>
+        </Link>
       </div>
-      <div className='nav-links'>
-        <button
-          className='nav-button how-it-works'
-          onClick={() => navigateTo("scroll")}
-        >
+      <div className="nav-links">
+        <Link to="/scroll" className="nav-button how-it-works">
           Gallery
-        </button>
-        <button className='nav-button sign-in'>Sign in</button>
+        </Link>
+        <button className="nav-button sign-in">Sign in</button>
       </div>
     </nav>
   );
 };
 
-export const Footer = ({ navigateTo }) => {
+export const Footer = () => {
   return (
-    <footer className='footer'>
-      <div className='footer-content'>
-        <div className='footer-logo'>
-          <button onClick={() => navigateTo("home")} className='logo-button'>
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-logo">
+          <Link to="/" className="logo-button">
             <img
               src={"/OFlogo.png"}
-              alt='OnlyFans Finder Logo'
-              className='logo-image'
+              alt="OnlyFans Finder Logo"
+              className="logo-image"
             />
-          </button>
+          </Link>
         </div>
-        <div className='footer-sections'>
-          <div className='footer-section'>
+        <div className="footer-sections">
+          <div className="footer-section">
             <h4>Product</h4>
             <ul>
               <li>
-                <button
-                  onClick={() => navigateTo("home")}
-                  className='footer-button'
-                >
+                <Link to="/" className="footer-button">
                   Finder
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => navigateTo("scroll")}
-                  className='footer-button'
-                >
+                <Link to="/scroll" className="footer-button">
                   Gallery
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
-          <div className='footer-section'>
+          <div className="footer-section">
             <h4>Company</h4>
             <ul>
               <li>
-                <button
-                  onClick={() => navigateTo("privacy-policy")}
-                  className='footer-button'
-                >
+                <Link to="/privacy-policy" className="footer-button">
                   Privacy Policy
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => navigateTo("terms-of-service")}
-                  className='footer-button'
-                >
+                <Link to="/terms-of-service" className="footer-button">
                   Terms of Service
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
-          <div className='footer-section'>
+          <div className="footer-section">
             <h4>Get in touch</h4>
             <ul>
               <li>
-                <button
-                  onClick={() => navigateTo("contact")}
-                  className='footer-button'
-                >
+                <Link to="/contact" className="footer-button">
                   Contact
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div className='footer-bottom'>
-        <hr className='footer-line' />
-        <p className='copyright'>
+      <div className="footer-bottom">
+        <hr className="footer-line" />
+        <p className="copyright">
           &copy; 2024 OnlyFans Finder. All rights reserved.
         </p>
       </div>
