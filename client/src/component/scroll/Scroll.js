@@ -1,5 +1,6 @@
 // Scroll.js
 import React, { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import ModelPopup from "../ModelPopup/ModelPopup";
 import "./Scroll.css";
 
@@ -86,6 +87,14 @@ const InfiniteScrollImages = ({ navigateTo }) => {
 
   return (
     <div className='scroll-page'>
+      <Helmet>
+        <title>OnlyFaceFinder — Browse Our Infinite Scroll of OnlyFans Models</title>
+        <meta
+          name="description"
+          content="Search and explore OnlyFans models on OnlyFaceFinder. Use our infinite scroll feature to find new OnlyFans models from over 100,000 profiles. Discover and search for your favorite creators easily."
+        />
+        <link rel="canonical" href="https://www.onlyfacefinder.com/scroll" />
+      </Helmet>
       <div className='scroll-container'>
         <div className='image-gallery-wrapper'>
           <h1 className='scroll-title'>Model Gallery</h1>
