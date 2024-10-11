@@ -20,7 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Hero />} />
             <Route path="/contact" element={<Contact />} />
-            {/* <Route path="/scroll" element={<InfiniteScrollImages />} /> */}
+            <Route path="/scroll" element={<InfiniteScrollImages />} />
             <Route path="/privacy-policy" element={<PP />} />
             <Route path="/terms-of-service" element={<TOS />} />
             <Route path="*" element={<NotFound />} /> {/* Catch-all route */}
