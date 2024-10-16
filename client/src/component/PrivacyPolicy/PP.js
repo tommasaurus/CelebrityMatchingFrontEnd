@@ -42,7 +42,7 @@ const PrivacyPolicy = () => {
       <p>We use the information collected to:</p>
       <ul>
         <li>Provide and maintain the platform and its services.</li>
-        <li>Process and match uploaded images with OnlyFans models.</li>
+        <li>Process and match uploaded images with celebrities.</li>
         <li>
           Improve the platform through analysis of user behavior and feedback.
         </li>

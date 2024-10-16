@@ -88,10 +88,10 @@ const InfiniteScrollImages = ({ navigateTo }) => {
   return (
     <div className='scroll-page'>
       <Helmet>
-        <title>OnlyFaceFinder — Browse Our Infinite Scroll of OnlyFans Models</title>
+        <title>OnlyFaceFinder — Browse Our Infinite Scroll of Celebrities</title>
         <meta
           name="description"
-          content="Search and explore OnlyFans models on OnlyFaceFinder. Use our infinite scroll feature to find new OnlyFans models from over 100,000 profiles. Discover and search for your favorite creators easily."
+          content="Search and explore celebrities on OnlyFaceFinder. Use our infinite scroll feature to find new celebrities from over 100,000 profiles. Discover and search for your favorite celebs easily."
         />
         <link rel="canonical" href="https://www.onlyfacefinder.com/scroll" />
       </Helmet>

@@ -11,7 +11,7 @@ const TOS = () => {
 
       <p>
         Welcome to OnlyFaceFinder, a service designed to provide entertainment
-        through matching users' uploaded images with profiles of OnlyFans models
+        through matching users' uploaded images with profiles of celebrities
         based on facial recognition technology. By accessing or using our
         platform, you agree to these Terms of Service (the “Terms”). Please read
         these Terms carefully, as they contain important information about your
@@ -68,7 +68,7 @@ const TOS = () => {
         non-exclusive, worldwide, royalty-free, fully paid-up license to use,
         process, and store the image solely for the purpose of providing our
         matching services. We take privacy seriously and will not use your image
-        for any purpose other than facial recognition and matching with models,
+        for any purpose other than facial recognition and matching with celebrities,
         in accordance with our Privacy Policy.
       </p>
       <p>
@@ -91,7 +91,7 @@ const TOS = () => {
       </p>
       <p>
         <strong>Important Disclaimer</strong>: OnlyFaceFinder is not affiliated
-        with OnlyFans or any of its models. Matches are provided for
+        with any organizations or any celebrities. Matches are provided for
         entertainment purposes only, and we do not endorse or guarantee any
         specific outcome.
       </p>

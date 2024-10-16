@@ -17,7 +17,7 @@ export const Navbar = () => {
         <Link to="/" className="logo-button">
           <img
             src={"/OFlogo.png"}
-            alt="OnlyFans Finder Logo"
+            alt="Celebrity Finder Logo"
             className="logo-image"
           />
         </Link>
@@ -40,7 +40,7 @@ export const Footer = () => {
           <Link to="/" className="logo-button">
             <img
               src={"/OFlogo.png"}
-              alt="OnlyFans Finder Logo"
+              alt="Celebrity Finder Logo"
               className="logo-image"
             />
           </Link>
@@ -91,7 +91,7 @@ export const Footer = () => {
       <div className="footer-bottom">
         <hr className="footer-line" />
         <p className="copyright">
-          &copy; 2024 OnlyFans Finder. All rights reserved.
+          &copy; 2024 OnlyFaceFinder. All rights reserved.
         </p>
       </div>
     </footer>

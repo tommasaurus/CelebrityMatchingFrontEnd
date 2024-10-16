@@ -305,7 +305,7 @@ const Hero = ({ navigateTo }) => {
       <div className='hero-container'>
         <img src={"/OFlogo.png"} alt='Logo' className='hero-logo' />
         <p className='hero-subtitle'>
-          Find out if your girlfriend is on OnlyFans
+          Find your celebrity lookalike
         </p>
 
         {errorMessage && (
@@ -522,7 +522,7 @@ const Hero = ({ navigateTo }) => {
                 icon: <CheckCircle size={32} />,
                 title: "Enjoy the result!",
                 description:
-                  "Our Neural Network compares your face with OnlyFans models and suggests the most similar ones.",
+                  "Our Neural Network compares your face with celebrities and suggests the most similar ones.",
               },
             ].map((instruction, index) => (
               <div key={index} className='instruction-block'>
@@ -545,7 +545,7 @@ const Hero = ({ navigateTo }) => {
             to refine the system and correct any errors.
           </p>
           <p className='beta-info-highlight'>
-            Exciting news: New models added weekly!
+            Exciting news: New celebrities added weekly!
           </p>
         </div>
 
